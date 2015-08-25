@@ -17,8 +17,8 @@ public class Threads1Exercise2 {
     public static void main(String[] args) {
         Even even = new Even();
         
-        EvenThread t1 = new EvenThread(even);
-        EvenThread t2 = new EvenThread(even);
+        EvenThreadSync t1 = new EvenThreadSync(even);
+        EvenThreadSync t2 = new EvenThreadSync(even);
         
         t1.start();
         t2.start();
@@ -33,4 +33,7 @@ public class Threads1Exercise2 {
 
     I mit tilfælge er de ikke sket selvom jeg har kørt 
     det mange gange, men det kan komme til at ske
+
+    Når sync er lagt ind vil den aldrig komme til at 
+    blive ulige
 */
