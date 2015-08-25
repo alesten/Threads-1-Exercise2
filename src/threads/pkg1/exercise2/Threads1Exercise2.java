@@ -15,7 +15,22 @@ public class Threads1Exercise2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Even even = new Even();
+        
+        EvenThread t1 = new EvenThread(even);
+        EvenThread t2 = new EvenThread(even);
+        
+        t1.start();
+        t2.start();
     }
-    
 }
+
+
+/*
+    Det er muligt at der ikke kun kommer et lige tal ud 
+    da den ene thread godt kan lægge 1 til lige før den 
+    printer det ud og derved bliver det udprintede ulige
+
+    I mit tilfælge er de ikke sket selvom jeg har kørt 
+    det mange gange, men det kan komme til at ske
+*/
